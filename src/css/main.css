@@ -1,0 +1,95 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700
+
+## Icons
+
+We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com) */
+
+@import 'normalize.css';
+ :root {
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --font-size: 13px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-grayish-blue);
+    width: 100%;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--font-size);
+}
+
+.card {
+    width: 50%;
+    height: 280px;
+    background-color: white;
+    display: flex;
+}
+
+.card-picture {
+    width: 40%;
+    height: 100%;
+    background: url('../images/drawers.jpg') left no-repeat;
+    background-size: cover;
+}
+
+.card-content {
+    width: 60%;
+    height: 100%;
+    padding: 15px;
+}
+
+
+/* .card-picture img {
+            width: 100%;
+            height: 100%;
+        } */
+
+.footer {
+    height: 15%;
+    width: 100%;
+}
+
+.person-data {
+    height: 100%;
+}
+
+img {
+    height: 100%;
+}
