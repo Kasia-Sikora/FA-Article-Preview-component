@@ -33,63 +33,140 @@ We provide SVGs for the social icons. But please feel free to use a font icon li
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com) */
 
-@import 'normalize.css';
- :root {
-    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
-    --desaturated-dark-blue: hsl(214, 17%, 51%);
-    --grayish-blue: hsl(212, 23%, 69%);
-    --light-grayish-blue: hsl(210, 46%, 95%);
-    --font-size: 13px;
+@import "normalize.css";
+:root {
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --font-size: 13px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: var(--light-grayish-blue);
-    width: 100%;
-    height: 100%;
-    font-family: 'Manrope', sans-serif;
-    font-size: var(--font-size);
+  margin: 0;
+  background-color: var(--light-grayish-blue);
+  width: 100vw;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.5;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .card {
-    width: 50%;
-    height: 280px;
-    background-color: white;
-    display: flex;
+    width:87%;
+    height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-picture {
-    width: 40%;
-    height: 100%;
-    background: url('../images/drawers.jpg') left no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 200px;
+  background: 0 -15px url("../images/drawers.jpg") no-repeat;
+  background-size: cover;
 }
 
 .card-content {
-    width: 60%;
-    height: 100%;
-    padding: 15px;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
 }
 
-
-/* .card-picture img {
-            width: 100%;
-            height: 100%;
-        } */
-
 .footer {
-    height: 15%;
-    width: 100%;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
 }
 
 .person-data {
-    height: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 img {
-    height: 100%;
+  height: 100%;
+  border-radius: 50%;
+  float: left;
+  margin-right: 16px;
+}
+
+.name,
+h1 {
+  color: var(--veryDarkGrayishBlue);
+}
+
+.date {
+  color: var(--grayish-blue);
+}
+
+p {
+  color: var(--desaturated-dark-blue);
+}
+
+.name {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 16px;
+  margin: unset;
+}
+
+.icon{
+    background-color:var(--light-grayish-blue);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;    
+}
+
+svg{
+    transform: translate(50%, 50%);
+}
+
+.icon:hover {
+    background-color: #6E8098;
+}
+
+.icon:hover path {
+    fill: white;;
+}
+
+@media only screen and (min-width: 1440px){
+    .card {
+      width: 730px;
+      height: 280px;
+      flex-direction: row;
+    }
+
+    .card-picture {
+      width: 39%;
+      height: 100%;
+      background: url("../images/drawers.jpg") left no-repeat;
+      background-size: cover;
+    }
+    .card-content {
+      width: 60%;
+      padding: 38px;
+    }
+    .footer {
+      height: 20%;
+    }
+    h1 {
+      font-size: 20px;
+    }
 }
